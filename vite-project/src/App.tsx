@@ -1,14 +1,15 @@
 import './App.css'
-import { Person } from "./Person";
+import { User, Countries } from "./Person";
+import { UserProvider } from "./UserContextProvider";
 
 
 function App() {
   return (
-  <>
-    < Person name = {"Osman"} age = {25} isMarried = {false} />{" "}
-    < Person name = {"Anjuu"} age = {5} isMarried = {false} />{" "}
-    < Person name = {"Fowsa"} age = {7} isMarried = {false} />{" "}
-  </>
+    <UserProvider>
+      < User name = {"Osman"} age = {25} isMarried = {false} country = {Countries.Somalia} />{" "}
+      < User name = {"Anjuu"} age = {5} isMarried = {false} country = {Countries.Somalia} />{" "}
+      < User name = {"Fowsa"} age = {7} isMarried = {false} country = {Countries.Somalia} />{" "}
+    </UserProvider>
   );
 }
 

@@ -1,30 +1,24 @@
-import React, { useState } from 'react';
-
-export interface Person {
+interface Props {
     name: string;
     age: number;
     isMarried: boolean;
+    country: Countries;
 }
-export const Person = (props: Person) => {
-    
-    const [personBio, setPersonBio] = useState<string | null>(null);
-    
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPersonBio(event.target.value);
-    };
 
+export enum Countries {
+    Somalia = "Somalia",
+    France = "France",
+    India = "India",
+    UnitedStates = "United States",
+}
+export const User = (props: Props) => {
+    // const { users, updateUser, deleteUser } = useContext(UserContext);
     return (
     <div>
         <p>Name: {props.name}</p>
         <p>Age: {props.age}</p>
         <p>This person {props.isMarried ? "is married" : "is single"}</p>
-
-        <p>
-            {" "}
-            {props.name} Bio: {!personBio ? "No bio Available" : personBio}
-        </p>
-
-        <input onChange = {handleChange} />
+        <p>Country of Origin: {props.country}</p>
     </div>
     );
 };
