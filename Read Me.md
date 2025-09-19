@@ -1,0 +1,1 @@
+Throughout this tutorial, you'll tackle over 170 interactive coding challenges and build six exciting projects. If you're tired of React courses that leave you staring blankly at an empty editor screen, you're in the right place! Here, you'll actually build React projects by the end, giving you the confidence and skills to tackle real-world apps.
